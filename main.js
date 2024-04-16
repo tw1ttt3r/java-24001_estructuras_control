@@ -85,9 +85,104 @@ console.info("el precio es: $", costo);
 // guardarlo en  una variable
 // el valor que retorna el prompt es de tipo string
 
-const edad1 = prompt('Proporciona tu edad:');
-console.info("edad1", edad1)
+// const edad1 = prompt('Proporciona tu edad:');
+// console.info("edad1", edad1)
+
+// ternario
+// expresion ? verdadera : falsa;
+// if (valor == null) {
+//   console.info("Esta variable esta vacia");
+// } else {
+//   console.info("Esta variable no esta vacia");
+// }
+valor == null ? console.info("Esta variable esta vacia") : console.info("Esta variable no esta vacia");
+
+// objetivo: asignacion de valores
+console.info(valor == null ? "Esta variable esta vacia" : "Esta variable no esta vacia");
+
 
 // Iterativas
 // ejecutar un conjunto de líneas de código n número de veces
 // for, while, for of, for in
+
+// for
+// sintaxis: for(inicio;condicion;incremento o decremento;) {}
+// imprimir la secuenca de numero del 1 al 20
+// string
+//              01234
+const nombre = "Pedro"; //n-1
+for(let i=0;i < nombre.length;i++) {
+  console.log(nombre[i]);
+}
+
+// Solicitarle al usuario su nombre completo
+// cambiar todas las vocales a mayusculas
+// los string .toUpperCase() .toLowerCase()
+// "PEDRO" -> "PEDRO"
+// "Pedro" -> "PEdrO"
+
+
+const nombre1 = prompt('Nombre:');
+let nombreConvertido = "";
+
+// for (let i=0;i<nombre1.length;i++) {
+//   switch(nombre1[i]) {
+//     case "a":
+//     case "e":
+//     case "i":
+//     case "o":
+//     case "u":
+//       nombreConvertido += nombre1[i].toUpperCase(); // concatenación
+//       // nombreConvertido = nombreConvertido + nombre1[i].toUpperCase();
+//       break;
+//     default:
+//       nombreConvertido += nombre1[i]
+//   }
+// }
+
+// console.log("nuevo nombre: ", nombreConvertido);
+
+
+// While
+// sintaxis: while(expr) {}
+
+let i = 0;
+while(i < nombre1.length) {
+  switch(nombre1[i]) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      nombreConvertido += nombre1[i].toUpperCase(); // concatenación
+      // nombreConvertido = nombreConvertido + nombre1[i].toUpperCase();
+      break;
+    default:
+      nombreConvertido += nombre1[i]
+  }
+  i++;
+}
+
+console.log("nuevo nombre: ", nombreConvertido);
+
+// suma de numeros
+// preguntarle al usuario por un numero
+// quieres sumar otro numero
+// si el usuario dice que si, preguntarle al usuario por un numero
+// si el usuario dice que no, imprimir la suma
+let respuesta = "s";
+let acum = 0;
+
+while(respuesta == "s") {
+  const num = prompt("proporciona un numero: ");
+  console.log("numero: ", num);
+  acum += Number(num);
+  respuesta = prompt("quieres sumar otro número: [s/n]");
+}
+
+console.info("suma: ", acum);
+
+
+
+
+
